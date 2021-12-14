@@ -1,8 +1,9 @@
-const express = require('express');
+const express = require("express");
+require("./db/mongoose");
 
 // Initialize routers here
-const signupRouter = require('./routers/signup');
-const loginRouter = require('./routers/login');
+const signupRouter = require("./routers/signup");
+const loginRouter = require("./routers/login");
 
 // Initialize our app
 const app = express();
@@ -17,4 +18,4 @@ app.use(loginRouter);
 // Start listening to the server
 app.listen(port, () => {
   console.log(`Server is running at: ${port}`);
-})
+});
