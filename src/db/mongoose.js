@@ -1,4 +1,4 @@
-import { connect } from "mongoose";
+const mongoose = require("mongoose");
 
 /**
  *  Create mongoose collection here
@@ -6,7 +6,7 @@ import { connect } from "mongoose";
  */
 const dbName = "BasisBackend";
 
-connect(`mongodb://127.0.0.1:27017/${dbName}`, {
+mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`, {
     useNewUrlParser: true,
     // cuseCreateIndex: true,
     useUnifiedTopology: true,
